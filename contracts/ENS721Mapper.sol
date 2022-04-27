@@ -1,9 +1,5 @@
 //SPDX-License-Identifier: MIT
-
-//Twitter: @hodl_pcc
-//
-/* This code should work for most ERC-721 contracts. Please feel free to reuse
-
+/*
 - Change IERC721Enumerable contract address in constructor - done
 - Update domainLabel value - done
 - Update nftImageBaseUri value to the base path of the images - done
