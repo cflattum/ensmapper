@@ -4,8 +4,8 @@
 //
 /* This code should work for most ERC-721 contracts. Please feel free to reuse
 
-- Change IERC721Enumerable contract address in constructor
-- Update domainLabel value
+- Change IERC721Enumerable contract address in constructor - done
+- Update domainLabel value - done
 - Update nftImageBaseUri value to the base path of the images
 - Set controller address of the parent domain to this deployed contract (in ENS web app)
 */
@@ -35,7 +35,7 @@ contract ENS721Mapper is Ownable {
     mapping(address => uint256) public nextRegisterTimestamp;
 
     string public domainLabel = "tweaks";
-    string public nftImageBaseUri = "https://ipfs.io/ipfs/QmUfyS4W6cBRRWtWpbW1as4ziaiEHTBD9WVcn1nrEB6xPu/";
+    string public nftImageBaseUri = "https://ipfs.io/ipfs/QmdDagL8zjPz5juomhrVGfxNw7aD4jhnTchCSvszcWPmsQ/";
     bool public useEIP155 = true;
     
     mapping(bytes32 => uint256) public hashToIdMap;
