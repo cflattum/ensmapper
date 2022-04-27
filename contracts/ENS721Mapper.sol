@@ -6,7 +6,7 @@
 
 - Change IERC721Enumerable contract address in constructor - done
 - Update domainLabel value - done
-- Update nftImageBaseUri value to the base path of the images
+- Update nftImageBaseUri value to the base path of the images - done
 - Set controller address of the parent domain to this deployed contract (in ENS web app)
 */
 
