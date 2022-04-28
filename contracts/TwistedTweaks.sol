@@ -15,15 +15,12 @@ _____ _    _ _____ _____ _____ ___________
   Twisted Tweaks / 2021
 */
 //test chang3
-import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "../node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
-import "../node_modules/@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 pragma solidity ^0.8.0;
-
-
-
 contract TwistedTweaks is ERC721Enumerable, Ownable {
     using Strings for uint256;
 

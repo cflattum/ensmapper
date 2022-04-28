@@ -8,11 +8,11 @@
 
 pragma solidity ^0.8.2;
 
-import "../node_modules/@ensdomains/ens-contracts/contracts/registry/ENS.sol";
-import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "../node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
-import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
-import "../node_modules/@openzeppelin/contracts/utils/Strings.sol";
+import "@ensdomains/ens-contracts/contracts/registry/ENS.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 interface IERC20 {
 	function balanceOf(address account) external view returns (uint256);
@@ -305,6 +305,11 @@ contract ENS721Mapper is Ownable {
 		uint256 balance = token.balanceOf(address(this));
 		token.transfer(msg.sender, balance);
 	}
+
+    //ensure can still regain control of tweak ENS domain
+    function transferENSOwner(bytes32 node, address newOwner) public onlyOwner {
+        ens.transfer(node,newOwner);
+    }
 
     //</owner-functions>
 
