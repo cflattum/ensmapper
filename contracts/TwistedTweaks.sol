@@ -21,9 +21,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 pragma solidity ^0.8.0;
-
-
-
 contract TwistedTweaks is ERC721Enumerable, Ownable {
     using Strings for uint256;
 
