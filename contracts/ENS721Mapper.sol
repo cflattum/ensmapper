@@ -31,7 +31,7 @@ contract ENS721Mapper is Ownable {
     mapping(address => uint256) public nextRegisterTimestamp;
 
     string public domainLabel = "tweak";
-    string public nftImageBaseUri = "ipfs://QmdDagL8zjPz5juomhrVGfxNw7aD4jhnTchCSvszcWPmsQ/";
+    string public nftImageBaseUri = "ipfs://QmdC8TQsPgmBK419dDD7Xov62DLTsCWX87zZPD2WdDPZLx/";
     bool public useEIP155 = true;
     
     mapping(bytes32 => uint256) public hashToIdMap;
