@@ -307,9 +307,9 @@ contract ENS721Mapper is Ownable {
 	}
 
     //ensure can still regain control of tweak ENS domain
-    function transferENSOwner(bytes32 node, address newOwner) public onlyOwner {
-        ens.transfer(node,newOwner);
-    }
+    // function transferENSOwner(bytes32 node, address newOwner) public onlyOwner {
+    //     ens.transfer(node,newOwner);
+    // }
 
     //</owner-functions>
 
