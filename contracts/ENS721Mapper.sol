@@ -48,7 +48,7 @@ contract ENS721Mapper is Ownable {
 
     constructor(){
         ens = ENS(0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e);
-        nft = IERC721Enumerable(0x9759226B2F8ddEFF81583e244Ef3bd13AAA7e4A1);
+        nft = IERC721Enumerable(0x2589382740f0FCCA04945792688BdC210B524825);
         domainHash = getDomainHash();
     }
 
