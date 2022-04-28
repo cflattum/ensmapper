@@ -1,15 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/contracts/ENS721Mapper.sol": {
-      "lastModificationDate": 1651106165260,
-      "contentHash": "92df38e9a53af57453e49f20bb5461fe",
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/contracts/ENS721Mapper.sol": {
       "lastModificationDate": 1651106302247,
       "contentHash": "cc90210584eb5286586237f5bbd37b82",
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "sourceName": "contracts/ENS721Mapper.sol",
       "solcConfig": {
         "version": "0.8.4",
