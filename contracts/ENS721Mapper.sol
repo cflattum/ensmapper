@@ -8,11 +8,11 @@
 
 pragma solidity ^0.8.2;
 
-import "../node_modules/@ensdomains/ens-contracts/contracts/registry/ENS.sol";
-import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "../node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
-import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
-import "../node_modules/@openzeppelin/contracts/utils/Strings.sol";
+import "@ensdomains/ens-contracts/contracts/registry/ENS.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 interface IERC20 {
 	function balanceOf(address account) external view returns (uint256);
@@ -30,8 +30,8 @@ contract ENS721Mapper is Ownable {
    
     mapping(address => uint256) public nextRegisterTimestamp;
 
-    string public domainLabel = "tweaks";
-    string public nftImageBaseUri = "https://ipfs.io/ipfs/QmdDagL8zjPz5juomhrVGfxNw7aD4jhnTchCSvszcWPmsQ/";
+    string public domainLabel = "tweak";
+    string public nftImageBaseUri = "ipfs://QmdDagL8zjPz5juomhrVGfxNw7aD4jhnTchCSvszcWPmsQ/";
     bool public useEIP155 = true;
     
     mapping(bytes32 => uint256) public hashToIdMap;
