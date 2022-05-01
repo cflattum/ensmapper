@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/contracts/ENS721Mapper.sol": {
-      "lastModificationDate": 1651106302247,
-      "contentHash": "cc90210584eb5286586237f5bbd37b82",
+      "lastModificationDate": 1651113228528,
+      "contentHash": "6e42cdb36b003d0f31c3266d6e1f3fd6",
       "sourceName": "contracts/ENS721Mapper.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -43,13 +43,8 @@
         "IERC20"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@ensdomains/ens-contracts/contracts/registry/ENS.sol": {
-      "lastModificationDate": 1651105684037,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@ensdomains/ens-contracts/contracts/registry/ENS.sol": {
       "lastModificationDate": 1651104131495,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "4fe1baff28770efa43c4a55754e66b10",
       "sourceName": "@ensdomains/ens-contracts/contracts/registry/ENS.sol",
       "solcConfig": {
@@ -83,13 +78,8 @@
         "ENS"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1651103422232,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
       "lastModificationDate": 1651102338491,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "cd8e72e5859bddd5fd26b2fb5c51c846",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
       "solcConfig": {
@@ -125,13 +115,8 @@
         "IERC721"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
-      "lastModificationDate": 1651103423931,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
       "lastModificationDate": 1651102338500,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "f4dd06783f321aa26179bc2b6e361c29",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
       "solcConfig": {
@@ -167,13 +152,8 @@
         "IERC721Enumerable"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1651103418676,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1651102338654,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -209,13 +189,8 @@
         "Ownable"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1651103418689,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
       "lastModificationDate": 1651102338727,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -249,13 +224,8 @@
         "Strings"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1651103422261,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
       "lastModificationDate": 1651102338448,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
@@ -289,13 +259,8 @@
         "IERC165"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1651103418688,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1651102337573,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -329,13 +294,8 @@
         "Context"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1651103422235,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
       "lastModificationDate": 1651102338088,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "21b9f3bdb3e60f56ea81361c37420136",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
@@ -377,13 +337,8 @@
         "ERC721"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1651103422232,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
       "lastModificationDate": 1651102338511,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "c22d4395e33763de693fd440c6fd10e1",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
@@ -417,13 +372,8 @@
         "IERC721Receiver"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1651103423931,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
       "lastModificationDate": 1651102338505,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
@@ -459,13 +409,8 @@
         "IERC721Metadata"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1651103418688,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1651102337499,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "ad714a6368ee7d43cded6bbe8af0b155",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
@@ -499,13 +444,8 @@
         "Address"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1651103422261,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
       "lastModificationDate": 1651102337906,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -541,15 +481,9 @@
         "ERC165"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/contracts/TwistedTweaks.sol": {
-      "lastModificationDate": 1651106272995,
-      "contentHash": "cd17e98b484e7ccb3527851124b1c206",
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/contracts/TwistedTweaks.sol": {
       "lastModificationDate": 1651106261183,
       "contentHash": "463564b069e8273bc38ffa735644d4bc",
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "sourceName": "contracts/TwistedTweaks.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -587,13 +521,8 @@
         "TwistedTweaks"
       ]
     },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
-      "lastModificationDate": 1651103423930,
-=======
     "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
       "lastModificationDate": 1651102338112,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
       "contentHash": "88095889e59d16821879a8083f906503",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
       "solcConfig": {
@@ -628,83 +557,6 @@
       ],
       "artifacts": [
         "ERC721Enumerable"
-      ]
-    },
-<<<<<<< HEAD
-    "/Users/colinmcdonnell/Desktop/Tweak Subdomains/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1651103417276,
-=======
-    "/Users/chris/Documents/SolidityDevelopment/ensmapper/contracts/Greeter.sol": {
-      "lastModificationDate": 1651102231797,
-      "contentHash": "54c28c84e5277b35b8c8329ce9755dae",
-      "sourceName": "contracts/Greeter.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "hardhat/console.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Greeter"
-      ]
-    },
-    "/Users/chris/Documents/SolidityDevelopment/ensmapper/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1651102339499,
->>>>>>> bae04c54f5a32b1ce93224154e04944010d957ae
-      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
-      "sourceName": "hardhat/console.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.9.0"
-      ],
-      "artifacts": [
-        "console"
       ]
     }
   }
