@@ -39,6 +39,7 @@ contract ENS721Mapper is Ownable {
     mapping(bytes32 => string) public hashToDomainMap;
 
     uint256 public reset_period = 7257600; //12 weeks
+    uint256 public claimFee = 0.02; //test claim fee, changable
 
     bool public publicClaimOpen = false;
     mapping(address => bool) public address_whitelist;
@@ -158,6 +159,7 @@ contract ENS721Mapper is Ownable {
 
         return trim_ids;
     }
+
     //</read-functions>
 
     //--------------------------------------------------------------------------------------------//
@@ -220,6 +222,11 @@ contract ENS721Mapper is Ownable {
         emit RegisterSubdomain(nft.ownerOf(token_id), token_id, label);     
     }
 
+    function setDomainPublic(string calldata label, uint256 token_id) public isAuthorised(token_id) payable {     
+        require(msg.value > claimFee, "not enough Eth sent to claim");   
+        setDomain(label, token_id);
+    }
+
     function setText(bytes32 node, string calldata key, string calldata value) external isAuthorised(hashToIdMap[node]) {
         uint256 token_id = hashToIdMap[node];
         require(token_id > 0 && tokenHashmap[token_id] != 0x0, "Invalid address");
@@ -261,6 +268,10 @@ contract ENS721Mapper is Ownable {
         domainHash = getDomainHash();
     }
 
+    function setClaimFee(uint256 fee) public onlyOwner{
+        claimFee = fee;
+    }
+
     function setNftAddress(address addy) public onlyOwner{
         nft = IERC721Enumerable(addy);
     }
@@ -290,11 +301,11 @@ contract ENS721Mapper is Ownable {
     }
 
     function renounceOwnership() public override onlyOwner {
-        require(false, "ENS is responsibility. You cannot renounce ownership.");
+        require(false, "Sorry - you cannot renounce ownership.");
         super.renounceOwnership();
     }
 
-    //just never know.. do you.
+    //might want to be able to withdraw if people send eth to this contract
 	function withdraw() public onlyOwner {
 		uint256 balance = address(this).balance;
 		payable(msg.sender).transfer(balance);
@@ -305,12 +316,6 @@ contract ENS721Mapper is Ownable {
 		uint256 balance = token.balanceOf(address(this));
 		token.transfer(msg.sender, balance);
 	}
-
-    //ensure can still regain control of tweak ENS domain
-    // function transferENSOwner(bytes32 node, address newOwner) public onlyOwner {
-    //     ens.transfer(node,newOwner);
-    // }
-
     //</owner-functions>
 
     modifier isAuthorised(uint256 tokenId) {
