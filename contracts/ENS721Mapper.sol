@@ -28,7 +28,7 @@ contract ENS721Mapper is Ownable {
     bytes32 public domainHash;
     mapping(bytes32 => mapping(string => string)) public texts;
    
-    mapping(address => uint256) public nextRegisterTimestamp;
+    mapping(address => mapping(uint256 => uint256)) public nextRegisterTimestamp;
 
     string public domainLabel = "tweak";
     string public nftImageBaseUri = "ipfs://QmdC8TQsPgmBK419dDD7Xov62DLTsCWX87zZPD2WdDPZLx/";
@@ -41,7 +41,7 @@ contract ENS721Mapper is Ownable {
     uint256 public reset_period = 7257600; //12 weeks
     uint256 public claimFee = 2; //test claim fee, changable
 
-    bool public publicClaimOpen = false;
+    bool public publicClaimOpen = true; //true initally,no waste gas
     mapping(address => bool) public address_whitelist;
 
     event TextChanged(bytes32 indexed node, string indexed indexedKey, string key);
@@ -99,8 +99,7 @@ contract ENS721Mapper is Ownable {
     }
 
     function getClaimableIdsForAddress(address addy) public view returns(uint256[] memory){
-        if(((address_whitelist[addy] || publicClaimOpen) 
-        && block.timestamp > nextRegisterTimestamp[addy]) 
+        if(((address_whitelist[addy] || publicClaimOpen)) 
         || owner() == addy){
             return getAllIds(addy);
         }
@@ -193,7 +192,7 @@ contract ENS721Mapper is Ownable {
     function setDomain(string calldata label, uint256 token_id) public isAuthorised(token_id) {     
         require(tokenHashmap[token_id] == 0x0, "Token has already been set");
         require(address_whitelist[msg.sender] || publicClaimOpen || owner() == msg.sender, "Not authorised");
-        require(block.timestamp > nextRegisterTimestamp[msg.sender], "Wallet must wait more time to register");
+        require(block.timestamp > nextRegisterTimestamp[msg.sender][token_id], "Wallet must wait more time to register");
            
         bytes32 encoded_label = keccak256(abi.encodePacked(label));
         bytes32 big_hash = keccak256(abi.encodePacked(domainHash, encoded_label));
@@ -211,7 +210,7 @@ contract ENS721Mapper is Ownable {
         hashToDomainMap[big_hash] = label;
 
         if (owner() != msg.sender){                 
-            nextRegisterTimestamp[msg.sender] = block.timestamp + reset_period;
+            nextRegisterTimestamp[msg.sender][token_id] = block.timestamp + reset_period;
 
             //if user is on whitelist then remove
             if (address_whitelist[msg.sender]){
@@ -236,7 +235,7 @@ contract ENS721Mapper is Ownable {
         emit TextChanged(node, key, key);
     }
         
-    function resetHash(uint256 token_id) public isAuthorised(token_id) {
+    function resetDomainForToken(uint256 token_id) public isAuthorised(token_id) {
         
         bytes32 domain = tokenHashmap[token_id];
         require(ens.recordExists(domain), "Sub-domain does not exist");
@@ -247,8 +246,8 @@ contract ENS721Mapper is Ownable {
         tokenHashmap[token_id] = 0x0;
 
         //allow sender to reclaim (if public == true)
-        if(nextRegisterTimestamp[msg.sender] > block.timestamp && msg.sender != owner()){
-            nextRegisterTimestamp[msg.sender] = block.timestamp + (60 * 30); //30 minute cooldown
+        if(nextRegisterTimestamp[msg.sender][token_id] > block.timestamp && msg.sender != owner()){
+            nextRegisterTimestamp[msg.sender][token_id] = block.timestamp + (60 * 30); //30 minute cooldown
         }
         
     }
@@ -288,8 +287,8 @@ contract ENS721Mapper is Ownable {
         ens = ENS(addy);
     }
 
-    function resetAddressForClaim(address addy) public onlyOwner {
-        nextRegisterTimestamp[addy] = 0;
+    function resetAddressForClaim(address addy,uint256 token_id) public onlyOwner {
+        nextRegisterTimestamp[addy][token_id] = 0;
     }
 
     function togglePublicClaim() public onlyOwner {
@@ -305,7 +304,7 @@ contract ENS721Mapper is Ownable {
         super.renounceOwnership();
     }
 
-    //might want to be able to withdraw if people send eth to this contract
+    //want to be able to withdraw if people send eth to this contract
 	function withdraw() public onlyOwner {
 		uint256 balance = address(this).balance;
 		payable(msg.sender).transfer(balance);
