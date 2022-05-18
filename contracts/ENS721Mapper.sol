@@ -39,7 +39,7 @@ contract ENS721Mapper is Ownable {
     mapping(bytes32 => string) public hashToDomainMap;
 
     uint256 public reset_period = 7257600; //12 weeks
-    uint256 public claimFee = 0.02; //test claim fee, changable
+    uint256 public claimFee = 2; //test claim fee, changable
 
     bool public publicClaimOpen = false;
     mapping(address => bool) public address_whitelist;
