@@ -222,7 +222,7 @@ contract ENS721Mapper is Ownable {
         emit RegisterSubdomain(nft.ownerOf(token_id), token_id, label);     
     }
 
-    function setDomainPublic(string calldata label, uint256 token_id) public isAuthorised(token_id) payable {     
+    function feeSetDomain(string calldata label, uint256 token_id) public isAuthorised(token_id) payable {     
         require(msg.value > claimFee, "not enough Eth sent to claim");   
         setDomain(label, token_id);
     }
